@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="NNUW1-Dreibholz-NorNetCore-Introduction">
+	<front>
+		<title>The NorNet Core Testbed – Introduction and Status</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<date day="18" month="September" year="2013" />
+	</front>
+	<seriesInfo name="Proceedings of the 1st International NorNet Users Workshop&#160;(NNUW-1)" value="" />
+	<format type="PDF" octets="8599639" target="http://simula.no/publications/Simula.simula.2124/simula_pdf_file" />
+</reference>
+

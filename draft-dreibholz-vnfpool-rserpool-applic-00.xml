@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+
+<?rfc toc="yes"?>
+<?rfc compact="yes" ?>
+<?rfc subcompact="no" ?>
+<?rfc strict="no" ?>
+<?rfc symrefs="yes" ?>
+
+<rfc category="exp" ipr="trust200902" docName="draft-dreibholz-vnfpool-rserpool-applic-00.txt">
+
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+
+
+<front>
+
+<title abbrev="RSerPool for VNFPOOL">The Applicability of Reliable Server Pooling (RSerPool) for Virtual Network Function Resource Pooling (VNFPOOL)</title>
+
+<!-- ************** THOMAS DREIBHOLZ *************** -->
+<author initials="T." surname="Dreibholz" fullname="Thomas Dreibholz">
+<organization abbrev="Simula Research Laboratory">Simula Research Laboratory, Network Systems Group</organization>
+<address>
+<postal>
+   <street>Martin Linges vei 17</street>
+   <city>1364 Fornebu</city>
+   <region>Akershus</region>
+   <country>Norway</country>
+</postal>
+<phone>+47-6782-8200</phone>
+<facsimile>+47-6782-8201</facsimile>
+<email>dreibh@simula.no</email>
+<uri>http://www.iem.uni-due.de/~dreibh/</uri>
+</address>
+</author>
+
+<!-- ************** MICHAEL TÜXEN *************** -->
+<author initials='M.' surname='Tuexen' fullname='Michael Tuexen'>
+<organization abbrev='Muenster Univ. of Appl. Sciences'>
+              Muenster University of Applied Sciences</organization>
+<address>
+    <postal>
+        <street>Stegerwaldstrasse 39</street>
+        <city>48565 Steinfurt</city>
+        <region>Nordrhein-Westfalen</region>
+        <country>Germany</country>
+    </postal>
+    <email>tuexen@fh-muenster.de</email>
+    <uri>https://www.fh-muenster.de/fb2/personen/professoren/tuexen/</uri>
+</address>
+</author>
+
+<date />
+<keyword>Internet-Draft</keyword>
+
+<abstract>
+<t>This draft describes the application of Reliable Server Pooling (RSerPool) for Virtual Network Function Resource Pooling (VNFPOOL).</t>
+</abstract>
+
+</front>
+
+
+<middle>
+
+
+<section title="Introduction">
+
+<!--
+<section title="Terminology">
+<t>TBD</t>
+</section>
+-->
+
+<section title="Abbreviations">
+<t>
+<list style="symbols">
+ <t>PE:       Pool Element</t>  
+ <t>PR:       Pool Registrar</t>
+ <t>PU:       Pool User</t>
+ <t>RSerPool: Reliable Server Pooling</t>
+ <t>SCTP:     Stream Control Transmission Protocol</t>
+ <t>VNFPOOL:  Virtual Network Function Resource Pooling</t>
+</list>
+</t>
+</section>
+
+
+<section title="Conventions">
+<t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL"
+in this document are to be interpreted as described in
+<xref target="RFC2119"/>.</t>
+</section>
+
+</section>
+
+
+<section title="Virtual Network Function Resource Pooling">
+<t>
+ TBD
+</t>
+</section>
+
+
+<section title="Reliable Server Pooling">
+<t>
+ TBD
+ 
+ Introduction:
+ <xref target='Dre2006'/>.
+ 
+ RFCs/I-Ds:
+  <xref target='RFC5351'/>,
+  <xref target='RFC5352'/>,
+  <xref target='RFC5353'/>,
+  <xref target='RFC5354'/>,
+  <xref target='RFC5355'/>,
+  <xref target='RFC5356'/>,
+  <xref target='RFC5356'/>,
+  <xref target='RFC5525'/>,
+  <xref target="I-D.dreibholz-rserpool-asap-hropt" />,
+  <xref target="I-D.dreibholz-rserpool-delay" />
+  <xref target="I-D.dreibholz-rserpool-enrp-takeover" />
+ 
+ Reference implementation RSPLIB:
+  <xref target='RSerPoolPage'/>.
+
+</t>
+</section>
+
+
+<section title="Usage of Reliable Server Pooling">
+<t>
+ TBD
+</t>
+</section>
+
+
+<section title="Testbed Platform">
+<t>A large-scale and realistic Internet testbed platform with support for Reliable Server Pooling and the underlying SCTP protocol is NorNet. A description of and introduction to NorNet is provided in <xref target="PAMS2013-NorNet" />, <xref target="NNUW1-Dreibholz-NorNetCore-Introduction" />, <xref target="NNUW1-Dreibholz-NorNetCore-Tutorial" />. Further information can be found on the project website <xref target="NorNet-Website" /> at http://www.nntb.no.</t>
+</section>
+
+
+<section title="Acknowledgments">
+<t>
+   The authors would like to thank
+INSERT_NAMES_HERE
+   for their friendly support.
+</t>
+</section>
+
+
+</middle>
+
+
+<back>
+
+<references title='Normative References'>
+ <?rfc include="reference.RFC.2119" ?>
+ 
+ <?rfc include="reference.RFC.5351" ?>
+ <?rfc include="reference.RFC.5352" ?>
+ <?rfc include="reference.RFC.5353" ?>
+ <?rfc include="reference.RFC.5354" ?>
+ <?rfc include="reference.RFC.5355" ?>
+ <?rfc include="reference.RFC.5356" ?>
+ <?rfc include="reference.RFC.5525" ?>
+ 
+ <?rfc include="reference.I-D.dreibholz-rserpool-asap-hropt" ?>
+ <?rfc include="reference.I-D.dreibholz-rserpool-delay" ?>
+ <?rfc include="reference.I-D.dreibholz-rserpool-enrp-takeover" ?>
+
+</references>
+
+<references title='Informative References'>
+ <?rfc include="reference.Dre2006" ?>
+ <?rfc include="reference.RSerPoolPage" ?>
+ 
+ <?rfc include="PAMS2013-NorNet" ?>
+ <?rfc include="NNUW1-Dreibholz-NorNetCore-Introduction" ?>
+ <?rfc include="NNUW1-Dreibholz-NorNetCore-Tutorial" ?>
+ <?rfc include="reference.NorNet-Website" ?>
+</references>
+
+</back>
+
+</rfc>

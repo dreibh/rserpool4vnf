@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="NorNet-Website">
+ <front>
+  <title>NorNet -- A Real-World, Large-Scale Multi-Homing Testbed</title>
+  <author initials="J." surname="Xiang" fullname="Jie Xiang" />
+  <date year="2013" />
+ </front>
+ <format type="HTML" octets="1024" target="http://www.nntb.no/" />
+ <annotation>http://www.nntb.no/</annotation>
+</reference>
