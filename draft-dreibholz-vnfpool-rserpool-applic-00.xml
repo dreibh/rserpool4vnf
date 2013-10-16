@@ -221,6 +221,26 @@ in this document are to be interpreted as described in
 </section>
 
 
+<section anchor="subsub:State-Synchronisation" title="State Synchronisation">
+<t>
+ RSerPool has been explicitly designed to be application-independent. Therefore, RSerPool has not intended to define special state synchronisation mechanisms for RSerPool-based applications. Such state synchronisation mechanisms are considered as tasks of the applications themselves. However, RSerPool defines two mechanisms to at least support the implementation of more sophisticated strategies: Cookies and Businesss Cards. Details on these mechanisms can also be found in <xref target="Dre2006" />.
+</t>
+
+<section title="Cookies">
+<t>
+ ASAP provides the mechanism of Client-Based State Sharing as introduced in <xref target="LCN2002" />. Whenever useful, the PE may package its state in form of a state cookie and send it -- by an ASAP_COOKIE message -- to the PU. The PU stores the latest state cookie received from the PE. Upon PE failure, this stored cookie is sent in an ASAP COOKIE_ECHO to the newly chosen PE. This PE may then restore the state. A shared secret known by all PEs of a pool may be used to protect the state from being manipulated or read by the PU.
+</t>
+<t>
+ While Client-Based State Sharing is very simple, it may be inefficient when the state changes too frequently, is too large (the size limit of an ASAP COOKIE/ASAP COOKIE_ECHO is 64 KiB) or if it must be prevented that a PU sends a state cookie to multiple PEs in order to increase its number of sessions.
+</t>
+</section>
+
+<section title="Businesss Cards">
+</section>
+
+</section>
+
+
 <section title="Protocol Stack">
 <t>
  The protocol stack of a PR provides ENRP and ASAP services to PRs and PEs/PUs respectively. But between PU and PE, ASAP provides a Session Layer protocol in the OSI model. From the perspective of the Application Layer, the PU side establishes a session with a pool. ASAP takes care of selecting a PE of the pool, initiating and maintaining the underlying transport connection and triggering a failover procedure when the PE becomes unavailable.
@@ -241,9 +261,9 @@ in this document are to be interpreted as described in
 <t>
  The following features of RSerPool can be used for VNFPOOL:
  <list style="symbols">
-   <t>Pool management.</t>
-   <t>PE seclection with pool policies.</t>
-   <t>Session management with help of ASAP Business Card.</t>
+  <t>Pool management.</t>
+  <t>PE seclection with pool policies.</t>
+  <t>Session management with help of ASAP Business Card.</t>
  </list>
 
  The following features have to be added to RSerPool itself:
@@ -307,6 +327,7 @@ INSERT_NAMES_HERE
 <references title='Informative References'>
  <?rfc include="reference.RSerPoolPage" ?>
  <?rfc include="Dre2006" ?>
+ <?rfc include="LCN2002" ?>
  <?rfc include="LCN2005" ?>
  <?rfc include="IJHIT2008" ?>
  <?rfc include="ICDS2008-LUD" ?>

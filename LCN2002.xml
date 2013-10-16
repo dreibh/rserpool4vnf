@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="LCN2002">
+	<front>
+		<title>An Efficient Approach for State Sharing in Server Pools</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<date day="8" month="November" year="2002" />
+	</front>
+	<seriesInfo name="Proceedings of the 27th IEEE Local Computer Networks Conference&#160;(LCN)," value="Pages 348–349, ISBN&#160;0-7695-1591-6, DOI&#160;10.1109/LCN.2002.1181806" />
+	<format type="PDF" octets="113237" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/StateSharing-Paper-ShortVersion.pdf" />
+</reference>
+
