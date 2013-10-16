@@ -49,6 +49,23 @@
 </address>
 </author>
 
+<!-- ************** MELINDA SHORE *************** -->
+<author initials='M.' surname='Shore' fullname='Melinda Shore '>
+<organization abbrev='No Mountain Software'>
+              No Mountain Software</organization>
+<address>
+    <postal>
+        <street>PO Box 16271</street>
+        <city>Two Rivers</city>
+	<code>99716</code>
+        <region>Alaska</region>
+        <country>U.S.A.</country>
+    </postal>
+    <phone>+1-907-322-9522</phone>
+    <email>melinda.shore@nomountain.net</email>
+</address>
+</author>
+
 <date />
 <keyword>Internet-Draft</keyword>
 
