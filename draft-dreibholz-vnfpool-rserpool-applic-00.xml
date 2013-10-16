@@ -30,7 +30,7 @@
 <phone>+47-6782-8200</phone>
 <facsimile>+47-6782-8201</facsimile>
 <email>dreibh@simula.no</email>
-<uri>http://www.iem.uni-due.de/ dreibh/</uri>
+<uri>http://www.iem.uni-due.de/~dreibh/</uri>
 </address>
 </author>
 
@@ -181,7 +181,7 @@ in this document are to be interpreted as described in
 
 <section title="Takeover Procedure">
 <t>
- As soon as a PE detects the failure of its PR-H (i.e. its request is not answered within a given timeout), it simply tries another PR of the operation scope for its registration and deregistration requests. However, as a double safeguard, the remaining PRs also negotiate a takeover of the PEs managed by a dead PR. This ensures that each PE again gets a working PR-H as soon as possible. The PRs of an operation scope monitor the availability of each other PR by using ENRP Presence messages, which are transmitted regularly. If there is no ENRP Presence within a given timeout, the peer is assumed to be dead and a so-called takeover procedure (see also <xref target="AINA2009" /> for more details) is initiated for the PEs managed by the dead PR: from all PRs having started this takeover procedure, the PR with the highest PR ID takes over the ownership of these PEs. The PEs are informed about being taken over by their new PR-H via an ASAP Endpoint Keep-Alive with Home-flag set. The PEs are requested to adopt the sender of this Home-flagged message as their new PR-H.
+ As soon as a PE detects the failure of its PR-H (i.e. its request is not answered within a given timeout), it simply tries another PR of the operation scope for its registration and deregistration requests. However, as a double safeguard, the remaining PRs also negotiate a takeover of the PEs managed by a dead PR. This ensures that each PE again gets a working PR-H as soon as possible. The PRs of an operation scope monitor the availability of each other PR by using ENRP_PRESENCE messages, which are transmitted regularly. If there is no ENRP_PRESENCE within a given timeout, the peer is assumed to be dead and a so-called takeover procedure (see also <xref target="AINA2009" /> for more details) is initiated for the PEs managed by the dead PR: from all PRs having started this takeover procedure, the PR with the highest PR ID takes over the ownership of these PEs. The PEs are informed about being taken over by their new PR-H via an ASAP Endpoint Keep-Alive with Home-flag set. The PEs are requested to adopt the sender of this Home-flagged message as their new PR-H.
 </t>
 </section>
 
@@ -216,7 +216,7 @@ in this document are to be interpreted as described in
 
 <section anchor="subsub:Automatic-Configuration" title="Automatic Configuration">
 <t>
- RSerPool components need to know the PRs of their operation scope. While it is of course possible to configure a list of PRs into each component, RSerPool also provides an auto-configuration feature: PRs may send so-called announces, i.e. ASAP Announce and ENRP Presence messages which are regularly sent over UDP via IP multicast. Unlike broadcasts, multicast messages can also be transported over routers (at least, this is easily possible within LANs). The announces of the PRs can be heard by the other components, which can maintain a list of currently available PRs. That is, RSerPool components are usually just turned on and everything works automatically.
+ RSerPool components need to know the PRs of their operation scope. While it is of course possible to configure a list of PRs into each component, RSerPool also provides an auto-configuration feature: PRs may send so-called announces, i.e. ASAP Announce and ENRP_PRESENCE messages which are regularly sent over UDP via IP multicast. Unlike broadcasts, multicast messages can also be transported over routers (at least, this is easily possible within LANs). The announces of the PRs can be heard by the other components, which can maintain a list of currently available PRs. That is, RSerPool components are usually just turned on and everything works automatically.
 </t>
 </section>
 
