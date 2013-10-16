@@ -5,9 +5,10 @@
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
 <?rfc strict="no" ?>
-<?rfc symrefs="yes" ?>
+<?rfc symrefs="no" ?>
+<?rfc sortrefs="yes" ?> 
 
-<rfc category="exp" ipr="trust200902" docName="draft-dreibholz-vnfpool-rserpool-applic-00.txt">
+<rfc category="info" ipr="trust200902" docName="draft-dreibholz-vnfpool-rserpool-applic-00.txt">
 
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 
@@ -57,7 +58,7 @@
     <postal>
         <street>PO Box 16271</street>
         <city>Two Rivers</city>
-	<code>99716</code>
+        <code>99716</code>
         <region>Alaska</region>
         <country>U.S.A.</country>
     </postal>
@@ -119,9 +120,107 @@ in this document are to be interpreted as described in
 
 
 <section title="Reliable Server Pooling">
+
+<section title="Introduction">
+
 <t>
- TBD
- 
+<figure anchor="fig:rserpool-overview" align="center">
+<artwork><![CDATA[
+    
+                      +---------------+
+                      |   Pool User   |
+                      +---------------+
+                              ^
+                              | ASAP
+                              V
+                      +---------------+   ENRP   +---------------+
+                      |   Registrar   |<-------->|   Registrar   |
+                      +---------------+          +---------------+
+                              ^
+                              | ASAP
+                              V
+      +------------------------------------------------------------+
+      | +--------------+ +--------------+         +--------------+ |
+      | | Pool Element | | Pool Element | ... ... | Pool Element | |
+      | +--------------+ +--------------+         +--------------+ |
+      | Server Pool                                                |
+      +------------------------------------------------------------+
+
+]]></artwork>
+</figure>
+</t>
+
+<t>
+An overview of the RSerPool framework -- which is defined as RFC in <xref target="RFC5351" /> -- is provided in <xref target="fig:rserpool-overview" />. There are three types of components:
+<list style="symbols">
+ <t>Pool Element (PE) denotes a server in a pool. PEs in the same pool provide the same service.</t>
+ <t>Pool User (PU) denotes a client using the service of a pool.</t>
+ <t>Pool Registrar (PR) is the management component for the pools.</t>
+</list> 
+The set of all pools within an operation scope (e.g. an organization, a company or a department) is denoted as handlespace. Clearly, a single PR would be a single point of failure. Therefore, PRs also have to be redundant. Within the handlespace, each pool is identified by a unique pool handle (PH).
+</t>
+</section>
+
+
+<section title="Registrar Operations">
+<t>
+The PRs of an operation scope synchronize their view of the handlespace by using the Endpoint haNdlespace Redundancy Protocol~(ENRP, defined as RFC in <xref target="RFC5353" />). In contrast to for instance the Domain Name System (DNS), an operation scope is restricted to a single administrative domain. That is, all of its components are under the control of the same authority (for example: a company). This property leads to small management overhead, which also allows for RSerPool usage on devices having only limited memory and CPU resources (for example: telecommunications equipment). Nevertheless, PEs may be distributed globally to continue their service even in case of localized disasters (like for example an earthquake). Each PR in the operation scope is identified by a PR ID, which is a randomly chosen 32-bit number.
+</t>
+</section>
+
+
+<section title="Pool Element Operations">
+<t>
+Within their operation scope, the PEs may choose an arbitrary PR to register into a pool by using the Aggregate Server Access Protocol~(ASAP, defined as RFC by~\cite{rfc-rserpool-asap}). The registration is performed by using an ASAP~Registration message. Within its pool, a PE is characterized by its PE~ID, which is a randomly chosen 32-bit number. Upon registration at a PR, the chosen PR becomes the Home-PR~(PR-H) of the newly registered PE. A PR-H is responsible for monitoring the availability of its PEs by ASAP~Endpoint~Keep~Alive messages~(to be acknowledged by a PE via an ASAP~Endpoint~Keep~Alive~Ack message within a configured timeout). The PR-H propagates the information about its PEs to the other PRs of the operation scope via ENRP~Update messages. This principle is illustrated in Figure~\ref{cap:Pool-Element-Registration}.
+</t>
+<t>
+PEs re-register regularly in an interval denoted as \emph{registration lifetime} and for information updates. Similar to the registration, a re-registration is performed by using another ASAP~Registration message. PEs may intentionally deregister from the pool by using an ASAP~Deregistration message. Also like for the registration, the PR-H makes the deregistration known to the other PRs within the operation scope by using an ENRP~Update message.
+</t>
+</section>
+
+
+<section title="Takeover Procedure">
+<t>
+As soon as a PE detects the failure of its PR-H (i.e.\ its request is not answered within a given timeout), it simply tries another PR of the operation scope for its registration and deregistration requests. However, as a double safeguard, the remaining PRs also negotiate a takeover of the PEs managed by a dead PR. This ensures that each PE again gets a working PR-H as soon as possible. The PRs of an operation scope monitor the availability of each other PR by using ENRP~Presence messages, which are transmitted regularly. If there is no ENRP~Presence within a given timeout, the peer is assumed to be dead and a so-called \emph{takeover procedure} (see also~\cite{AINA2009} for details) is initiated for the PEs managed by the dead PR: from all PRs having started this takeover procedure, the PR with the highest PR~ID takes over the ownership of these PEs. The PEs are informed about being taken over by their new PR-H via an ASAP~Endpoint~Keep-Alive with Home-flag set. The PEs are requested to adopt the sender of this Home-flagged message as their new PR-H.
+</t>
+</section>
+
+
+<section title="Pool User Operations">
+<t>
+% ------ Handle Resolution and Response -------------------------------------
+In order to access the service of a pool given by its PH, a PU requests a PE selection from an arbitrary PR of the operation scope, again by using ASAP. This selection procedure is denoted as \emph{handle resolution}. Upon reception of a so-called ASAP~Handle~Resolution message the PR selects the requested list of PE identities and returns them in an ASAP Handle Resolution Response message.
+% ------ Policies -----------------------------------------------------------
+The pool-specific selection rule is denoted as \emph{pool policy}. Two classes of load distribution policies are supported: non-adaptive and adaptive strategies (a detailed overview is provided by~\cite{Dre2006,LCN2005,IJHIT2008}). While adaptive strategies base their selections on the current PE state (which requires up-to-date information), non-adaptive algorithms do not need such data. A basic set of adaptive and non-adaptive pool policies is defined as RFC by~\cite{rfc-rserpool-policies}.
+
+% ------ RR, RAND, LU , LUD and statefull/stateless -------------------------
+Relevant for this article are the non-adaptive policies Round Robin~(RR) and Random~(RAND) as well as the adaptive policies Least Used~(LU) and Least Used with Degradation~(LUD). LU selects the least-used PE, according to up-to-date application-specific load information. Round robin selection is applied among multiple least-loaded PEs. LUD, which is evaluated by~\cite{ICDS2008-LUD}, furthermore introduces a \emph{load decrement} constant which is added to the actual load each time a PE is selected. This mechanism compensates inaccurate load states due to delayed updates. An update resets the load to the actual load value. It is important to differentiate policies between \emph{stateful} and \emph{stateless}, as is explained by~\cite{LCN2005}: for a stateful policy, a selection is influenced by the previous choice. For example, the ``in turn'' selection of RR is stateful. LUD is also stateful. On the order hand, LU and RAND are stateless; they will -- regardless of a previous selection -- return a least-loaded or random element.
+
+% ------ PU-based Endpoint Monitoring ---------------------------------------
+A PE may fail, e.g.\ due to hardware or network failures. Since there is a certain latency between the actual failure of a PE and the removal of its entry from the handlespace -- depending on the interval and timeout for the ASAP~Endpoint~Keep~Alive monitoring -- the PUs may report unreachable PEs to a PR by using an ASAP~Endpoint~Unreachable message. A PR locally counts these reports for each PE and when reaching the threshold \var{Max\-Bad\-PE\-Re\-ports} (default is~3, as defined in the RFC by~\cite{rfc-rserpool-asap}), the PR may decide to remove the PE from the handlespace. The counter of a PE is reset upon its re-registration. More details on this threshold and guidelines for its configuration can be found in~\cite{IJAIT2009}.
+</t>
+</section>
+
+
+<section title="Automatic Configuration">
+<t>
+RSerPool components need to know the PRs of their operation scope. While it is of course possible to configure a list of PRs into each component, RSerPool also provides an auto-configuration feature: PRs may send so-called \emph{announces}, i.e.\ ASAP~Announce and ENRP~Presence messages which are regularly sent over UDP via IP~multicast. Unlike broadcasts, multicast messages can also be transported over routers (at least, this is easily possible within LANs). The announces of the PRs can be heard by the other components, which can maintain a list of currently available PRs. That is, RSerPool components are usually just turned on and everything works automatically.
+</t>
+<t>
+An example is provided by Figure~\ref{cap:ASAP-Announce-Example} for the ASAP-based PU/PE configuration: all PEs and PUs within the multicast domain (e.g.\ a company or department LAN) can learn the identity of the PE automatically. Components outside of this domain (e.g.\ off-site systems in the Internet) need manual configuration.
+</t>
+</section>
+
+
+<section title="Protocol Stack">
+<t>
+Figure~\ref{cap:Protocol-Stack} presents an illustration of the RSerPool protocol stack: a PR provides ENRP and ASAP services to PRs and PEs/PUs respectively. But between PU and PE, ASAP provides a Session Layer protocol in the OSI model. This makes ASAP the first IETF standard for a Session Layer protocol. From the perspective of the Application Layer, the PU side establishes a \emph{session} with a pool. ASAP takes care of selecting a PE of the pool, initiating and maintaining the underlying transport connection and triggering a failover procedure when the PE becomes unavailable.
+
+The Transport Layer protocol is by default SCTP over possibly multi-homed IPv4 and/or IPv6 -- except for the UDP-based automatic configuration announces (see Subsection~\ref{sub:Automatic-Configuration}) which are not shown here for readability reasons.
+</t>
+</section>
+
+<!--<t>
  Introduction:
  <xref target='Dre2006'/>.
  
@@ -142,10 +241,20 @@ in this document are to be interpreted as described in
   <xref target='RSerPoolPage'/>.
 
 </t>
+
+</section>-->
+
 </section>
 
 
 <section title="Usage of Reliable Server Pooling">
+<t>
+ TBD
+</t>
+</section>
+
+
+<section title="Security Considerations">
 <t>
  TBD
 </t>
@@ -193,6 +302,7 @@ INSERT_NAMES_HERE
  <?rfc include="reference.RSerPoolPage" ?>
  
  <?rfc include="PAMS2013-NorNet" ?>
+ <?rfc include="IJIIDS2010" ?>
  <?rfc include="NNUW1-Dreibholz-NorNetCore-Introduction" ?>
  <?rfc include="NNUW1-Dreibholz-NorNetCore-Tutorial" ?>
  <?rfc include="reference.NorNet-Website" ?>
