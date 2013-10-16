@@ -71,7 +71,7 @@
 <keyword>Internet-Draft</keyword>
 
 <abstract>
-<t>This draft describes the application of Reliable Server Pooling (RSerPool) for Virtual Network Function Resource Pooling (VNFPOOL).</t>
+<t>This draft describes the application of Reliable Server Pooling&#160;(RSerPool) for Virtual Network Function Resource Pooling&#160;(VNFPOOL).</t>
 </abstract>
 
 </front>
@@ -153,25 +153,25 @@ in this document are to be interpreted as described in
 <t>
  An overview of the RSerPool framework -- which is defined as RFC in <xref target="RFC5351" /> -- is provided in <xref target="fig:rserpool-overview" />. There are three types of components:
  <list style="symbols">
-  <t>Pool Element (PE) denotes a server in a pool. PEs in the same pool provide the same service.</t>
-  <t>Pool User (PU) denotes a client using the service of a pool.</t>
-  <t>Pool Registrar (PR) is the management component for the pools.</t>
+  <t>Pool Element&#160;(PE) denotes a server in a pool. PEs in the same pool provide the same service.</t>
+  <t>Pool User&#160;(PU) denotes a client using the service of a pool.</t>
+  <t>Pool Registrar&#160;(PR) is the management component for the pools.</t>
  </list> 
- The set of all pools within an operation scope (for example: an organization, a company or a department) is denoted as handlespace. Clearly, a single PR would be a single point of failure. Therefore, PRs also have to be redundant. Within the handlespace, each pool is identified by a unique pool handle (PH).
+ The set of all pools within an operation scope (for example: an organization, a company or a department) is denoted as handlespace. Clearly, a single PR would be a single point of failure. Therefore, PRs also have to be redundant. Within the handlespace, each pool is identified by a unique pool handle&#160;(PH).
 </t>
 </section>
 
 
 <section title="Registrar Operations">
 <t>
- The PRs of an operation scope synchronise their view of the handlespace by using the Endpoint haNdlespace Redundancy Protocol (ENRP, defined as RFCs in <xref target="RFC5353" />, <xref target="RFC5354" />). In contrast to for instance the Domain Name System (DNS), an operation scope is restricted to a single administrative domain. That is, all of its components are under the control of the same authority (for example: a company). This property leads to small management overhead, which also allows for RSerPool usage on devices having only limited memory and CPU resources (for example: telecommunications equipment). Nevertheless, PEs may be distributed globally to continue their service even in case of localised disasters (like for example an earthquake). Each PR in the operation scope is identified by a PR ID, which is a randomly chosen 32-bit number.
+ The PRs of an operation scope synchronise their view of the handlespace by using the Endpoint haNdlespace Redundancy Protocol&#160;(ENRP, defined as RFCs in <xref target="RFC5353" />, <xref target="RFC5354" />). In contrast to for instance the Domain Name System&#160;(DNS), an operation scope is restricted to a single administrative domain. That is, all of its components are under the control of the same authority (for example: a company). This property leads to small management overhead, which also allows for RSerPool usage on devices having only limited memory and CPU resources (for example: telecommunications equipment). Nevertheless, PEs may be distributed globally to continue their service even in case of localised disasters (like for example an earthquake). Each PR in the operation scope is identified by a PR ID, which is a randomly chosen 32-bit number.
 </t>
 </section>
 
 
 <section title="Pool Element Operations">
 <t>
- Within their operation scope, the PEs may choose an arbitrary PR to register into a pool by using the Aggregate Server Access Protocol (ASAP, defined as RFCs in <xref target="RFC5352" />, <xref target="RFC5354" />). The registration is performed by using an ASAP_REGISTRATION message. Within its pool, a PE is characterised by its PE ID, which is a randomly chosen 32-bit number. Upon registration at a PR, the chosen PR becomes the Home-PR (PR-H) of the newly registered PE. A PR-H is responsible for monitoring the availability of its PEs by ASAP_ENDPOINT_KEEP_ALIVE messages (to be acknowledged by a PE via an ASAP_ENDPOINT_KEEP_ALIVE_ACK message within a configured timeout). The PR-H propagates the information about its PEs to the other PRs of the operation scope via ENRP_UPDATE messages.
+ Within their operation scope, the PEs may choose an arbitrary PR to register into a pool by using the Aggregate Server Access Protocol&#160;(ASAP, defined as RFCs in <xref target="RFC5352" />, <xref target="RFC5354" />). The registration is performed by using an ASAP_REGISTRATION message. Within its pool, a PE is characterised by its PE ID, which is a randomly chosen 32-bit number. Upon registration at a PR, the chosen PR becomes the Home-PR&#160;(PR-H) of the newly registered PE. A PR-H is responsible for monitoring the availability of its PEs by ASAP_ENDPOINT_KEEP_ALIVE messages (to be acknowledged by a PE via an ASAP_ENDPOINT_KEEP_ALIVE_ACK message within a configured timeout). The PR-H propagates the information about its PEs to the other PRs of the operation scope via ENRP_UPDATE messages.
 </t>
 <t>
  PEs re-register regularly in an interval denoted as registration lifetime and for information updates. Similar to the registration, a re-registration is performed by using another ASAP_REGISTRATION message. PEs may intentionally deregister from the pool by using an ASAP_DEREGISTRATION message. Also like for the registration, the PR-H makes the deregistration known to the other PRs within the operation scope by using an ENRP_UPDATE message.
@@ -199,7 +199,7 @@ in this document are to be interpreted as described in
  The pool-specific selection rule is denoted as pool member selection policy or shortly as pool policy. Two classes of load distribution policies are supported: non-adaptive and adaptive strategies (a detailed overview is provided by <xref target="Dre2006" />, <xref target="LCN2005" />, <xref target="IJHIT2008" />. While adaptive strategies base their selections on the current PE state (which requires up-to-date information), non-adaptive algorithms do not need such data. A basic set of adaptive and non-adaptive pool policies is defined as RFC by <xref target="RFC5356" />.
 </t>
 <t>
- Defined in <xref target="RFC5356" /> are the non-adaptive policies Round Robin (RR), Random (RAND) and Priority (PRIO) as well as the adaptive policies Least Used (LU) and Least Used with Degradation (LUD).
+ Defined in <xref target="RFC5356" /> are the non-adaptive policies Round Robin&#160;(RR), Random&#160;(RAND) and Priority&#160;(PRIO) as well as the adaptive policies Least Used&#160;(LU) and Least Used with Degradation&#160;(LUD).
  While RR/RAND select PEs in turn/randomly, PRIO selects one of the PEs having the highest priority. PRIO can for example be used to realise a master/backup PE setup. Only if there are no master PEs left, a backup PE is selected. Round-robin selection is applied among PEs having the same priority.
  LU selects the least-used PE, according to up-to-date application-specific load information. Round robin selection is applied among multiple least-loaded PEs. LUD, which is evaluated by <xref target="ICDS2008-LUD" />, furthermore introduces a load decrement constant that is added to the actual load each time a PE is selected. It is used to compensate inaccurate load states due to delayed updates. An update resets the load to the actual load value.
 </t>
@@ -231,7 +231,7 @@ in this document are to be interpreted as described in
  ASAP provides the mechanism of Client-Based State Sharing as introduced in <xref target="LCN2002" />. Whenever useful, the PE may package its state in form of a state cookie and send it -- by an ASAP_COOKIE message -- to the PU. The PU stores the latest state cookie received from the PE. Upon PE failure, this stored cookie is sent in an ASAP_COOKIE_ECHO to the newly chosen PE. This PE may then restore the state. A shared secret known by all PEs of a pool may be used to protect the state from being manipulated or read by the PU.
 </t>
 <t>
- While Client-Based State Sharing is very simple, it may be inefficient when the state changes too frequently, is too large (the size limit of an ASAP_COOKIE/ASAP_COOKIE_ECHO is 64 KiB) or if it must be prevented that a PU sends a state cookie to multiple PEs in order to duplicate its sessions.
+ While Client-Based State Sharing is very simple, it may be inefficient when the state changes too frequently, is too large (the size limit of an ASAP_COOKIE/ASAP_COOKIE_ECHO is 64&#160;KiB) or if it must be prevented that a PU sends a state cookie to multiple PEs in order to duplicate its sessions.
 </t>
 </section>
 
@@ -290,11 +290,13 @@ in this document are to be interpreted as described in
  The following features have to be added to RSerPool itself:
  <list style="symbols">
   <t>Support of TCP including MPTCP as additional/alternative transport protocols.</t>
+  <t>Possibly add some special pool policies?</t>
  </list>
 
  The following features have to be provided outside of RSerPool:
  <list style="symbols">
   <t>State synchronisation for VNFPOOL.</t>
+  <t>Pool Manager functionality as an RSerPool-based service.</t>
  </list>
 
 </t>
