@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="IJAIT2009">
+	<front>
+		<title>Overview and Evaluation of the Server Redundancy and Session Failover Mechanisms in the Reliable Server Pooling Framework</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
+		<date month="June" year="2009" />
+	</front>
+	<seriesInfo name="International Journal on Advances in Internet Technology&#160;(IJAIT)," value="Volume 2, Number 1, Pages 1–14, ISSN&#160;1942-2652" />
+	<format type="PDF" octets="1183747" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJAIT2009.pdf" />
+</reference>
+

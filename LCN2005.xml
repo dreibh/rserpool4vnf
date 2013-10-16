@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="LCN2005">
+	<front>
+		<title>On the Performance of Reliable Server Pooling Systems</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
+		<date day="16" month="November" year="2005" />
+	</front>
+	<seriesInfo name="Proceedings of the IEEE Conference on Local Computer Networks&#160;(LCN) 30th Anniversary," value="Pages 200–208, ISBN&#160;0-7695-2421-4, DOI&#160;10.1109/LCN.2005.98" />
+	<format type="PDF" octets="688273" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/LCN2005.pdf" />
+</reference>
+

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="AINA2009">
+	<front>
+		<title>Evaluation and Optimization of the Registrar Redundancy Handling in Reliable Server Pooling Systems</title>
+		<author initials="X." surname="Zhou" fullname="Xing&#160;Zhou" />
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="F." surname="Fa" fullname="Fu&#160;Fa" />
+		<author initials="W." surname="Du" fullname="Wencai&#160;Du" />
+		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
+		<date day="26" month="May" year="2009" />
+	</front>
+	<seriesInfo name="Proceedings of the IEEE 23rd International Conference on Advanced Information Networking and Applications&#160;(AINA)," value="Pages 256–262, ISBN&#160;978-0-7695-3638-5, DOI&#160;10.1109/AINA.2009.25" />
+	<format type="PDF" octets="495559" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/AINA2009.pdf" />
+</reference>
+

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="IJHIT2008">
+	<front>
+		<title>An Evaluation of the Pool Maintenance Overhead in Reliable Server Pooling Systems</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
+		<date month="April" year="2008" />
+	</front>
+	<seriesInfo name="SERSC International Journal on Hybrid Information Technology&#160;(IJHIT)," value="Volume 1, Number 2, Pages 17–32, ISSN&#160;1738-9968" />
+	<format type="PDF" octets="3367196" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJHIT2008.pdf" />
+</reference>
+
