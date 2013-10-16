@@ -171,7 +171,7 @@ in this document are to be interpreted as described in
 
 <section title="Pool Element Operations">
 <t>
- Within their operation scope, the PEs may choose an arbitrary PR to register into a pool by using the Aggregate Server Access Protocol (ASAP, defined as RFCs in <xref target="RFC5352" />, <xref target="RFC5354" />). The registration is performed by using an ASAP Registration message. Within its pool, a PE is characterized by its PE ID, which is a randomly chosen 32-bit number. Upon registration at a PR, the chosen PR becomes the Home-PR (PR-H) of the newly registered PE. A PR-H is responsible for monitoring the availability of its PEs by ASAP Endpoint Keep Alive messages (to be acknowledged by a PE via an ASAP Endpoint Keep Alive Ack message within a configured timeout). The PR-H propagates the information about its PEs to the other PRs of the operation scope via ENRP Update messages.
+ Within their operation scope, the PEs may choose an arbitrary PR to register into a pool by using the Aggregate Server Access Protocol (ASAP, defined as RFCs in <xref target="RFC5352" />, <xref target="RFC5354" />). The registration is performed by using an ASAP Registration message. Within its pool, a PE is characterized by its PE ID, which is a randomly chosen 32-bit number. Upon registration at a PR, the chosen PR becomes the Home-PR (PR-H) of the newly registered PE. A PR-H is responsible for monitoring the availability of its PEs by ASAP_ENDPOINT_KEEP_ALIVE messages (to be acknowledged by a PE via an ASAP_ENDPOINT_KEEP_ALIVE_ACK message within a configured timeout). The PR-H propagates the information about its PEs to the other PRs of the operation scope via ENRP Update messages.
 </t>
 <t>
  PEs re-register regularly in an interval denoted as registration lifetime and for information updates. Similar to the registration, a re-registration is performed by using another ASAP Registration message. PEs may intentionally deregister from the pool by using an ASAP Deregistration message. Also like for the registration, the PR-H makes the deregistration known to the other PRs within the operation scope by using an ENRP Update message.
@@ -199,13 +199,15 @@ in this document are to be interpreted as described in
  The pool-specific selection rule is denoted as pool member selection policy or shortly as pool policy. Two classes of load distribution policies are supported: non-adaptive and adaptive strategies (a detailed overview is provided by <xref target="Dre2006" />, <xref target="LCN2005" />, <xref target="IJHIT2008" />. While adaptive strategies base their selections on the current PE state (which requires up-to-date information), non-adaptive algorithms do not need such data. A basic set of adaptive and non-adaptive pool policies is defined as RFC by <xref target="RFC5356" />.
 </t>
 <t>
- Relevant for this article are the non-adaptive policies Round Robin (RR) and Random (RAND) as well as the adaptive policies Least Used (LU) and Least Used with Degradation (LUD). LU selects the least-used PE, according to up-to-date application-specific load information. Round robin selection is applied among multiple least-loaded PEs. LUD, which is evaluated by <xref target="ICDS2008-LUD" />, furthermore introduces a load decrement constant which is added to the actual load each time a PE is selected. This mechanism compensates inaccurate load states due to delayed updates. An update resets the load to the actual load value. It is important to differentiate policies between stateful and stateless, as is explained in <xref target="LCN2005" />: for a stateful policy, a selection is influenced by the previous choice. For example, the "in turn" selection of RR is stateful. LUD is also stateful. On the order hand, LU and RAND are stateless; they will -- regardless of a previous selection -- return a least-loaded or random element.
+ Defined in <xref target="RFC5356" /> are the non-adaptive policies Round Robin (RR), Random (RAND) and Priority (PRIO) as well as the adaptive policies Least Used (LU) and Least Used with Degradation (LUD).
+ While RR/RAND select PEs in turn/randomly, PRIO selects one of the PEs having the highest priority. PRIO can for example be used to realise a master/backup PE setup. Only if there are no master PEs left, a backup PE is selected. Round-robin selection is applied among PEs having the same priority.
+ LU selects the least-used PE, according to up-to-date application-specific load information. Round robin selection is applied among multiple least-loaded PEs. LUD, which is evaluated by <xref target="ICDS2008-LUD" />, furthermore introduces a load decrement constant that is added to the actual load each time a PE is selected. It is used to compensate inaccurate load states due to delayed updates. An update resets the load to the actual load value.
 </t>
 </section>
 
 <section title="Handle Resolution and Response">
 <t>
- PE may fail, e.g. due to hardware or network failures. Since there is a certain latency between the actual failure of a PE and the removal of its entry from the handlespace -- depending on the interval and timeout for the ASAP Endpoint Keep Alive monitoring -- the PUs may report unreachable PEs to a PR by using an ASAP Endpoint Unreachable message. A PR locally counts these reports for each PE and when reaching the threshold MAX-BAD-PE-REPORT (default is 3, as defined in the RFC <xref target="RFC5352" />), the PR may decide to remove the PE from the handlespace. The counter of a PE is reset upon its re-registration. More details on this threshold and guidelines for its configuration can be found in <xref target="IJAIT2009" />.
+ PE may fail, for example due to hardware or network failures. Since there is a certain latency between the actual failure of a PE and the removal of its entry from the handlespace -- depending on the interval and timeout for the ASAP_ENDPOINT_KEEP_ALIVE monitoring -- the PUs may report unreachable PEs to a PR by using an ASAP_ENDPOINT_UNREACHABLE message. A PR locally counts these reports for each PE and when reaching the threshold MAX-BAD-PE-REPORT (default is 3, as defined in the RFC <xref target="RFC5352" />), the PR may decide to remove the PE from the handlespace. The counter of a PE is reset upon its re-registration. More details on this threshold and guidelines for its configuration can be found in <xref target="IJAIT2009" />.
 </t>
 </section>
 
@@ -233,7 +235,27 @@ in this document are to be interpreted as described in
 
 <section title="Usage of Reliable Server Pooling">
 <t>
- TBD
+ **** TO BE DISCUSSED! **** 
+</t>
+
+<t>
+ The following features of RSerPool can be used for VNFPOOL:
+ <list style="symbols">
+   <t>Pool management.</t>
+   <t>PE seclection with pool policies.</t>
+   <t>Session management with help of ASAP Business Card.</t>
+ </list>
+
+ The following features have to be added to RSerPool itself:
+ <list style="symbols">
+  <t>Support of TCP and MPTCP as further transport protocols.</t>
+ </list>
+
+ The following features have to be provided outside of RSerPool:
+ <list style="symbols">
+  <t>State synchronisation for VNFPOOL.</t>
+ </list>
+
 </t>
 </section>
 
