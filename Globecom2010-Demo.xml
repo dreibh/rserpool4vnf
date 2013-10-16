@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="Globecom2010-Demo">
+	<front>
+		<title>The RSPLIB Project – From Research to Application</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="M." surname="Becke" fullname="Martin&#160;Becke" />
+		<date day="8" month="December" year="2010" />
+	</front>
+	<seriesInfo name="Demo Presentation at the IEEE Global Communications Conference&#160;(GLOBECOM)" value="" />
+	<format type="PDF" octets="2155355" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/Globecom2010-Demo.pdf" />
+</reference>
+

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<reference anchor="OMNeT++Workshop2009">
+	<front>
+		<title>SimProcTC – The Design and Realization of a Powerful Tool-Chain for OMNeT++ Simulations</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<author initials="X." surname="Zhou" fullname="Xing&#160;Zhou" />
+		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
+		<date day="6" month="March" year="2009" />
+	</front>
+	<seriesInfo name="Proceedings of the 2nd ACM/ICST International Workshop on OMNeT++," value="Pages 1–8, ISBN&#160;978-963-9799-45-5, DOI&#160;10.4108/ICST.SIMUTOOLS2009.5517" />
+	<format type="PDF" octets="564894" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeT__Workshop2009.pdf" />
+</reference>
+
