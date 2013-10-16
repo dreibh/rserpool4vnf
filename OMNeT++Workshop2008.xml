@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="OMNeT++Workshop2008">
+<reference anchor="OMNeTWorkshop2008">
 	<front>
 		<title>A Powerful Tool-Chain for Setup, Distributed Processing, Analysis and Debugging of OMNeT++ Simulations</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
