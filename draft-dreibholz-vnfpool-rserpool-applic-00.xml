@@ -51,7 +51,7 @@
 </author>
 
 <!-- ************** MELINDA SHORE *************** -->
-<author initials='M.' surname='Shore' fullname='Melinda Shore '>
+<author initials='M.' surname='Shore' fullname='Melinda Shore'>
 <organization abbrev='No Mountain Software'>
               No Mountain Software</organization>
 <address>
@@ -64,6 +64,22 @@
     </postal>
     <phone>+1-907-322-9522</phone>
     <email>melinda.shore@nomountain.net</email>
+</address>
+</author>
+
+<!-- ************** NING ZONG *************** -->
+<author initials='N.' surname='Zong' fullname='Ning Zong'>
+<organization abbrev='Huawei Technologies'>
+              Huawei Technologies</organization>
+<address>
+    <postal>
+        <street>101 Software Avenue</street>
+        <city>Nanjing</city>
+        <code>210012</code>
+        <region>Jiangsu</region>
+        <country>China</country>
+    </postal>
+    <email>zongning@huawei.com</email>
 </address>
 </author>
 
@@ -114,7 +130,12 @@ in this document are to be interpreted as described in
 
 <section title="Virtual Network Function Resource Pooling">
 <t>
- TBD
+ Virtualized Network Function&#160;(VNF) (e.g.&#160;vFW, vLB) -- as introduced in more detail in <xref target="I-D.zong-vnfpool-problem-statement" /> -- provides the same function as the equivalent network function (e.g.&#160;FW, LB), but is deployed as software instances running on general purpose servers via virtualisation platform. The main features of VNF include the following aspects:
+ <list style="numbers">
+   <t>A service consists of a sequence of topologically distributed VNF instances where the data connections are preferably directly established between the instances.</t>
+   <t>There are potentially more factors that cause VNF instance transition or even failure; VNF pool refers to a group of VNF instances providing same network function.</t>
+   </list>
+ Each VNF pool has a Pool Manager&#160;(PM) to manage the VNF instance such as instance selection, monitoring, etc.. There will be redundancy mechanism for reliable PM as well.
 </t>
 </section>
 
@@ -347,6 +368,7 @@ INSERT_NAMES_HERE
  <?rfc include="reference.I-D.dreibholz-rserpool-asap-hropt" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-delay" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-enrp-takeover" ?>
+ <?rfc include="reference.I-D.zong-vnfpool-problem-statement" ?>
 
 </references>
 
