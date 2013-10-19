@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="OMNeT__Workshop2009" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeT__Workshop2009.pdf">
+<reference anchor="OMNeTWorkshop2009" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeT__Workshop2009.pdf">
 	<front>
 		<title>SimProcTC – The Design and Realization of a Powerful Tool-Chain for OMNeT++ Simulations</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

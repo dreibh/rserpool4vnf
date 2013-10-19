@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="OMNeT__Workshop2008" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf">
+<reference anchor="OMNeTWorkshop2008" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf">
 	<front>
 		<title>A Powerful Tool-Chain for Setup, Distributed Processing, Analysis and Debugging of OMNeT++ Simulations</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

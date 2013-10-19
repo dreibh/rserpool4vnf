@@ -5,7 +5,7 @@
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
 <?rfc strict="no" ?>
-<?rfc symrefs="yes" ?>
+<?rfc symrefs="no" ?>
 <!-- <?rfc sortrefs="yes" ?>  -->
 
 <rfc category="info" ipr="trust200902" docName="draft-dreibholz-vnfpool-rserpool-applic-00.txt">
@@ -294,7 +294,7 @@ in this document are to be interpreted as described in
  RSPLIB is the Open Source reference implementation of RSerPool. It is currently -- as of October 2013 -- available for Linux, FreeBSD, MacOS and Solaris. It is actively maintained. Particularly, it is also included in Ubuntu Linux as well as in the FreeBSD ports collection. RSPLIB can be downloaded from <xref target="RSerPoolPage" />. Further details on the implementation are available in <xref target="Dre2006" />, <xref target="Globecom2010-Demo" />.
 </t>
 <t>
-  RSerPool with RSPLIB is deployed in a couple of Open Source projects, including the SimProcTC Simulation Processing Tool-Chain for distributing simulation runs in a compute pool (see  <xref target="OMNeT__Workshop2008" /> as well as 
+  RSerPool with RSPLIB is deployed in a couple of Open Source projects, including the SimProcTC Simulation Processing Tool-Chain for distributing simulation runs in a compute pool (see  <xref target="OMNeTWorkshop2008" /> as well as 
   simulation run distribution project explained in <xref target="Dre2012" /> for a practical example) as well as for service infrastructure management in the NorNet Core research testbed (see <xref target="PAMS2013-NorNet" />).
 </t>
 </section>
