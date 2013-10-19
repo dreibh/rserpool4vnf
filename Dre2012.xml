@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="Dre2012">
+<reference anchor="Dre2012" target="http://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29737/Dre2012_final.pdf">
 	<front>
 		<title>Evaluation and Optimisation of Multi-Path Transport using the Stream Control Transmission Protocol</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

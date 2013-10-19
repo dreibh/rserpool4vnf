@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="LCN2005">
+<reference anchor="LCN2005" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/LCN2005.pdf">
 	<front>
 		<title>On the Performance of Reliable Server Pooling Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="ICDS2008-LUD">
+<reference anchor="ICDS2008-LUD" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/ICDS2008-LUD.pdf">
 	<front>
 		<title>A New Server Selection Strategy for Reliable Server Pooling in Widely Distributed Environments</title>
 		<author initials="X." surname="Zhou" fullname="Xing&#160;Zhou" />

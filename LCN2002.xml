@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="LCN2002">
+<reference anchor="LCN2002" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/StateSharing-Paper-ShortVersion.pdf">
 	<front>
 		<title>An Efficient Approach for State Sharing in Server Pools</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

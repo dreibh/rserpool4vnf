@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="Globecom2010-Demo">
+<reference anchor="Globecom2010-Demo" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/Globecom2010-Demo.pdf">
 	<front>
 		<title>The RSPLIB Project – From Research to Application</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

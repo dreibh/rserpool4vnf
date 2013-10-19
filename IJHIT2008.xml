@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="IJHIT2008">
+<reference anchor="IJHIT2008" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJHIT2008.pdf">
 	<front>
 		<title>An Evaluation of the Pool Maintenance Overhead in Reliable Server Pooling Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

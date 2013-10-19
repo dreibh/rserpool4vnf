@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="IJIIDS2010">
+<reference anchor="IJIIDS2010" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJIIDS2010.pdf">
 	<front>
 		<title>On the Security of Reliable Server Pooling Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

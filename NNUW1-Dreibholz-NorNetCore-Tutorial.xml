@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="NNUW1-Dreibholz-NorNetCore-Tutorial">
+<reference anchor="NNUW1-Dreibholz-NorNetCore-Tutorial" target="http://simula.no/publications/Simula.simula.2130/simula_pdf_file">
 	<front>
 		<title>The NorNet Core Testbed – An Experiment Tutorial</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

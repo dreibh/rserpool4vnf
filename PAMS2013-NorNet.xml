@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="PAMS2013-NorNet">
+<reference anchor="PAMS2013-NorNet" target="http://simula.no/publications/threfereedinproceedingsreference.2012-12-20.7643198512/simula_pdf_file">
 	<front>
 		<title>Design and Implementation of the NorNet Core Research Testbed for Multi-Homed Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />

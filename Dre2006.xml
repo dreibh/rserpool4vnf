@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="Dre2006">
+<reference anchor="Dre2006" target="http://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-16326/Dre2006_final.pdf">
 	<front>
 		<title>Reliable Server Pooling – Evaluation, Optimization and Extension of a Novel IETF Architecture</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
