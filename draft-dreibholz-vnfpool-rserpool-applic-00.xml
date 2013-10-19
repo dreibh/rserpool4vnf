@@ -320,6 +320,7 @@ in this document are to be interpreted as described in
  <list style="symbols">
   <t>Support of TCP including MPTCP as additional/alternative transport protocols.</t>
   <t>Possibly add some special pool policies?</t>
+  <t>See also <xref target="I-D.dreibholz-rserpool-nextgen-ideas" /> for ideas on a next generation of RSerPool.</t>
  </list>
 
  The following features have to be provided outside of RSerPool:
@@ -384,7 +385,7 @@ INSERT_NAMES_HERE
  <?rfc include="reference.I-D.dreibholz-rserpool-delay" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-enrp-takeover" ?>
  <?rfc include="reference.I-D.zong-vnfpool-problem-statement" ?>
-<!-- <?rfc include="reference.I-D.dreibholz-rserpool-nextgen-ideas" ?>-->
+ <?rfc include="reference.I-D.dreibholz-rserpool-nextgen-ideas" ?>
 
 </references>
 
