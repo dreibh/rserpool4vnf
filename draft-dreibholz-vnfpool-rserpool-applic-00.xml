@@ -369,6 +369,7 @@ INSERT_NAMES_HERE
  <?rfc include="reference.I-D.dreibholz-rserpool-delay" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-enrp-takeover" ?>
  <?rfc include="reference.I-D.zong-vnfpool-problem-statement" ?>
+<!-- <?rfc include="reference.I-D.dreibholz-rserpool-nextgen-ideas" ?>-->
 
 </references>
 
