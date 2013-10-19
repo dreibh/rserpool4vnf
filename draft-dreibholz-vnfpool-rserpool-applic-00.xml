@@ -5,7 +5,7 @@
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
 <?rfc strict="no" ?>
-<?rfc symrefs="no" ?>
+<?rfc symrefs="yes" ?>
 <!-- <?rfc sortrefs="yes" ?>  -->
 
 <rfc category="info" ipr="trust200902" docName="draft-dreibholz-vnfpool-rserpool-applic-00.txt">
@@ -118,12 +118,12 @@
 </section>
 
 
-<section title="Conventions">
+<!--<section title="Conventions">
 <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL"
 in this document are to be interpreted as described in
 <xref target="RFC2119"/>.</t>
-</section>
+</section>-->
 
 </section>
 
@@ -217,7 +217,7 @@ in this document are to be interpreted as described in
 
 <section title="Pool Member Selection Policies">
 <t>
- The pool-specific selection rule is denoted as pool member selection policy or shortly as pool policy. Two classes of load distribution policies are supported: non-adaptive and adaptive strategies (a detailed overview is provided by <xref target="Dre2006" />, <xref target="LCN2005" />, <xref target="IJHIT2008" />. While adaptive strategies base their selections on the current PE state (which requires up-to-date information), non-adaptive algorithms do not need such data. A basic set of adaptive and non-adaptive pool policies is defined as RFC by <xref target="RFC5356" />.
+ The pool-specific selection rule is denoted as pool member selection policy or shortly as pool policy. Two classes of load distribution policies are supported: non-adaptive and adaptive strategies (a detailed overview is provided by <xref target="Dre2006" />, <xref target="LCN2005" />, <xref target="IJIIDS2010" />, <xref target="IJHIT2008" />. While adaptive strategies base their selections on the current PE state (which requires up-to-date information), non-adaptive algorithms do not need such data. A basic set of adaptive and non-adaptive pool policies is defined as RFC by <xref target="RFC5356" />.
 </t>
 <t>
  Defined in <xref target="RFC5356" /> are the non-adaptive policies Round Robin&#160;(RR), Random&#160;(RAND) and Priority&#160;(PRIO) as well as the adaptive policies Least Used&#160;(LU) and Least Used with Degradation&#160;(LUD).
@@ -281,6 +281,14 @@ in this document are to be interpreted as described in
 </section>
 
 
+<section title="Extensions">
+<t>
+ A couple of extensions to RSerPool are existing:
+ Handle Resolution Option defined in <xref target="I-D.dreibholz-rserpool-asap-hropt" /> improves the PE selection by letting the PU tell the PR its required number of PEs to be selected. ENRP Takeover Suggestion introduced in <xref target="I-D.dreibholz-rserpool-enrp-takeover" /> ensures load balancing among PRs. <xref target="I-D.dreibholz-rserpool-delay" /> defines a delay-sensitive pool policy. <xref target="RFC5525" /> defines an SNMP MIB for RSerPool.
+</t>
+</section>
+
+
 <section title="Reference Implementation and Deployment">
 <t>
  RSPLIB is the Open Source reference implementation of RSerPool. It is currently -- as of October 2013 -- available for Linux, FreeBSD, MacOS and Solaris. It is actively maintained. Particularly, it is also included in Ubuntu Linux as well as in the FreeBSD ports collection. RSPLIB can be downloaded from <xref target="RSerPoolPage" />. Further details on the implementation are available in <xref target="Dre2006" />, <xref target="Globecom2010-Demo" />.
@@ -326,7 +334,14 @@ in this document are to be interpreted as described in
 
 <section title="Security Considerations">
 <t>
- TBD
+ Security considerations for RSerPool can be found in <xref target="RFC5355" />. Furthermore, <xref target="IJIIDS2010" /> examines the robustness of RSerPool systems against attacks.
+</t>
+</section>
+
+
+<section title="IANA Considerations">
+<t>
+ This document introduces no additional considerations for IANA.
 </t>
 </section>
 
@@ -354,7 +369,7 @@ INSERT_NAMES_HERE
 <back>
 
 <references title='Normative References'>
- <?rfc include="reference.RFC.2119" ?>
+<!--  <?rfc include="reference.RFC.2119" ?> -->
  
  <?rfc include="reference.RFC.4960" ?>
  <?rfc include="reference.RFC.5351" ?>
