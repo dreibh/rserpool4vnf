@@ -15,7 +15,7 @@
 
 <front>
 
-<title abbrev="RSerPool for VNFPOOL">The Applicability of Reliable Server Pooling (RSerPool) for Virtual Network Function Resource Pooling (VNFPOOL)</title>
+<title abbrev="RSerPool for VNFPOOL">The Applicability of Reliable Server Pooling&nbsp;(RSerPool) for Virtual Network Function Resource Pooling&nbsp;(VNFPOOL)</title>
 
 <!-- ************** THOMAS DREIBHOLZ *************** -->
 <author initials="T." surname="Dreibholz" fullname="Thomas Dreibholz">
@@ -278,7 +278,7 @@ in this document are to be interpreted as described in
  The protocol stack of a PR provides ENRP and ASAP services to PRs and PEs/PUs respectively. But between PU and PE, ASAP provides a Session Layer protocol in the OSI model. From the perspective of the Application Layer, the PU side establishes a session with a pool. ASAP takes care of selecting a PE of the pool, initiating and maintaining the underlying transport connection and triggering a failover procedure when the PE becomes unavailable.
 </t>
 <t>
-  The Transport Layer protocol is by default SCTP (as defined in <xref target="RFC4960" /> -- except for the UDP-based automatic configuration announces (see <xref target="subsub:Automatic-Configuration" />) -- over possibly multi-homed IPv4 and/or IPv6. SCTP has been chosen due to its support of multi-homing and its reliability features (see also <xref target="Dre2012" />).
+  The Transport Layer protocol is by default SCTP (as defined in <xref target="RFC4960" />) -- except for the UDP-based automatic configuration announces (see <xref target="subsub:Automatic-Configuration" />) -- over possibly multi-homed IPv4 and/or IPv6. SCTP has been chosen due to its support of multi-homing and its reliability features (see also <xref target="Dre2012" />).
 </t>
 </section>
 
@@ -297,7 +297,7 @@ in this document are to be interpreted as described in
 </t>
 <t>
   RSerPool with RSPLIB is deployed in a couple of Open Source projects, including the SimProcTC Simulation Processing Tool-Chain for distributing simulation runs in a compute pool (see  <xref target="OMNeTWorkshop2008" /> as well as
-  simulation run distribution project explained in <xref target="Dre2012" /> for a practical example) as well as for service infrastructure management in the NorNet Core research testbed (see <xref target="PAMS2013-NorNet" />).
+  the simulation run distribution project explained in <xref target="Dre2012" /> for a practical example) as well as for service infrastructure management in the NorNet Core research testbed (see <xref target="PAMS2013-NorNet" />).
 </t>
 </section>
 
