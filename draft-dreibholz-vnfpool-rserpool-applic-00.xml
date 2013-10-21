@@ -107,7 +107,7 @@
 <section title="Abbreviations">
 <t>
 <list style="symbols">
- <t>PE:       Pool Element</t>  
+ <t>PE:       Pool Element</t>
  <t>PR:       Pool Registrar</t>
  <t>PU:       Pool User</t>
  <t>RSerPool: Reliable Server Pooling</t>
@@ -130,12 +130,14 @@ in this document are to be interpreted as described in
 
 <section title="Virtual Network Function Resource Pooling">
 <t>
- Virtualized Network Function&#160;(VNF) (e.g.&#160;vFW, vLB) -- as introduced in more detail in <xref target="I-D.zong-vnfpool-problem-statement" /> -- provides the same function as the equivalent network function (e.g.&#160;FW, LB), but is deployed as software instances running on general purpose servers via virtualisation platform. The main features of VNF include the following aspects:
+ Virtualised Network Function&#160;(VNF) (e.g.&#160;vFW, vLB) -- as introduced in more detail in <xref target="I-D.zong-vnfpool-problem-statement" /> -- provides the same function as the equivalent network function (e.g.&#160;FW, LB), but is deployed as software instances running on general purpose servers via virtualisation platform. The main features of VNF include the following aspects:
  <list style="numbers">
-   <t>A service consists of a sequence of topologically distributed VNF instances where the data connections are preferably directly established between the instances.</t>
-   <t>There are potentially more factors that cause VNF instance transition or even failure; VNF pool refers to a group of VNF instances providing same network function.</t>
-   </list>
- Each VNF pool has a Pool Manager&#160;(PM) to manage the VNF instance such as instance selection, monitoring, etc.. There will be redundancy mechanism for reliable PM as well.
+  <t>A service consists of a sequence of topologically distributed VNF instances where the data connections are preferably directly established between the instances.</t>
+  <t>There are potentially more factors that cause VNF instance transition or even failure; VNF pool refers to a group of VNF instances providing same network function.</t>
+ </list>
+</t>
+<t>
+ Virtualisation technology allows network function virtualisation operators to build a reliable VNF by pooling the underlying resources, such as CPU, storage, networking, etc. to form a cluster of VNF instances. VNF pool refers to a cluster or group of VNF instances providing same network function. Each VNF pool has a Pool Manager&#160;(PM) to manage the VNF instance such as instance selection, monitoring, etc. There will be a redundancy mechanism for a reliable PM to achieve reliable VNF. More details on VNF pool can be found in <xref target="I-D.zong-vnfpool-problem-statement" />.
 </t>
 </section>
 
@@ -147,7 +149,7 @@ in this document are to be interpreted as described in
 <t>
 <figure anchor="fig:rserpool-overview" align="center">
 <artwork><![CDATA[
-    
+
                       +---------------+
                       |   Pool User   |
                       +---------------+
@@ -177,8 +179,8 @@ in this document are to be interpreted as described in
   <t>Pool Element&#160;(PE) denotes a server in a pool. PEs in the same pool provide the same service.</t>
   <t>Pool User&#160;(PU) denotes a client using the service of a pool.</t>
   <t>Pool Registrar&#160;(PR) is the management component for the pools.</t>
- </list> 
- The set of all pools within an operation scope (for example: an organization, a company or a department) is denoted as handlespace. Clearly, a single PR would be a single point of failure. Therefore, PRs also have to be redundant. Within the handlespace, each pool is identified by a unique pool handle&#160;(PH).
+ </list>
+ The set of all pools within an operation scope (for example: an organisation, a company or a department) is denoted as handlespace. Clearly, a single PR would be a single point of failure. Therefore, PRs also have to be redundant. Within the handlespace, each pool is identified by a unique pool handle&#160;(PH).
 </t>
 </section>
 
@@ -264,7 +266,7 @@ in this document are to be interpreted as described in
  The first case to use a Business Card is if only a restricted set of PEs in the pool may be used for failover. For example, in a large pool, each PE can share its complete set of session states with a few other PEs only. This keeps the system scalable. That is, a PE in a pool of n servers does not have to synchronise all session states with the other n-1 PEs. In this case, a PE has to tell its PU the set of PE identities being candidates for a failover using an ASAP_BUSINESS_CARD message. A PE may update the list of possible failover candidates at any time by sending another Business Card. The PU has to store the latest list of failover candidates. Of course, if a failover becomes necessary, the PU has to select from this list using the appropriate pool policy -- instead of performing the regular PE selection by handle resolution at a PR. Therefore, some literature also denotes the Business Card by the more expressive term "last will".
 </t>
 <t>
- In symmetric scenarios, where a PU is also a PE of another pool, the PU has to tell this fact to its PE. This is realised by sending an ASAP_BUSINESS_CARD message to the PE, providing the PH of its pool. Optionally, also specific PE identities for failover may be provided. The format remains the same as explained in the previous paragraph. If the PE detects a failure of its PU, the PE may -- now in the role of a PU -- use the provided PH for a handle resolution to find a new PE or use the provided PE identities to select one. After that, it can perform a failover to that PE.  
+ In symmetric scenarios, where a PU is also a PE of another pool, the PU has to tell this fact to its PE. This is realised by sending an ASAP_BUSINESS_CARD message to the PE, providing the PH of its pool. Optionally, also specific PE identities for failover may be provided. The format remains the same as explained in the previous paragraph. If the PE detects a failure of its PU, the PE may -- now in the role of a PU -- use the provided PH for a handle resolution to find a new PE or use the provided PE identities to select one. After that, it can perform a failover to that PE.
 </t>
 </section>
 
@@ -294,7 +296,7 @@ in this document are to be interpreted as described in
  RSPLIB is the Open Source reference implementation of RSerPool. It is currently -- as of October 2013 -- available for Linux, FreeBSD, MacOS and Solaris. It is actively maintained. Particularly, it is also included in Ubuntu Linux as well as in the FreeBSD ports collection. RSPLIB can be downloaded from <xref target="RSerPoolPage" />. Further details on the implementation are available in <xref target="Dre2006" />, <xref target="Globecom2010-Demo" />.
 </t>
 <t>
-  RSerPool with RSPLIB is deployed in a couple of Open Source projects, including the SimProcTC Simulation Processing Tool-Chain for distributing simulation runs in a compute pool (see  <xref target="OMNeTWorkshop2008" /> as well as 
+  RSerPool with RSPLIB is deployed in a couple of Open Source projects, including the SimProcTC Simulation Processing Tool-Chain for distributing simulation runs in a compute pool (see  <xref target="OMNeTWorkshop2008" /> as well as
   simulation run distribution project explained in <xref target="Dre2012" /> for a practical example) as well as for service infrastructure management in the NorNet Core research testbed (see <xref target="PAMS2013-NorNet" />).
 </t>
 </section>
@@ -305,7 +307,7 @@ in this document are to be interpreted as described in
 
 <section title="Usage of Reliable Server Pooling">
 <t>
- **** TO BE DISCUSSED! **** 
+ **** TO BE DISCUSSED! ****
 </t>
 
 <t>
@@ -370,8 +372,8 @@ INSERT_NAMES_HERE
 <back>
 
 <references title='Normative References'>
-<!--  <?rfc include="reference.RFC.2119" ?> -->
- 
+ <!--  <?rfc include="reference.RFC.2119" ?> -->
+
  <?rfc include="reference.RFC.4960" ?>
  <?rfc include="reference.RFC.5351" ?>
  <?rfc include="reference.RFC.5352" ?>
@@ -380,7 +382,7 @@ INSERT_NAMES_HERE
  <?rfc include="reference.RFC.5355" ?>
  <?rfc include="reference.RFC.5356" ?>
  <?rfc include="reference.RFC.5525" ?>
- 
+
  <?rfc include="reference.I-D.dreibholz-rserpool-asap-hropt" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-delay" ?>
  <?rfc include="reference.I-D.dreibholz-rserpool-enrp-takeover" ?>
