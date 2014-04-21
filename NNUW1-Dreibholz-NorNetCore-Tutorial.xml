@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="NNUW1-Dreibholz-NorNetCore-Tutorial" target="http://simula.no/publications/Simula.simula.2130/simula_pdf_file">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="NNUW1-Dreibholz-NorNetCore-Tutorial" target="https://simula.no/publications/Simula.simula.2130/simula_pdf_file">
 	<front>
 		<title>The NorNet Core Testbed – An Experiment Tutorial</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<date day="19" month="September" year="2013" />
 	</front>
 	<seriesInfo name="" value="Proceedings of the 1st International NorNet Users Workshop&#160;(NNUW-1)" />
-	<format type="PDF" octets="4560635" target="http://simula.no/publications/Simula.simula.2130/simula_pdf_file" />
+	<format type="PDF" octets="4560635" target="https://simula.no/publications/Simula.simula.2130/simula_pdf_file" />
 </reference>
 

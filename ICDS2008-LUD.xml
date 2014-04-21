@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="ICDS2008-LUD" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/ICDS2008-LUD.pdf">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="ICDS2008-LUD" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/ICDS2008-LUD.pdf">
 	<front>
 		<title>A New Server Selection Strategy for Reliable Server Pooling in Widely Distributed Environments</title>
 		<author initials="X." surname="Zhou" fullname="Xing&#160;Zhou" />
@@ -7,7 +8,7 @@
 		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
 		<date day="14" month="February" year="2008" />
 	</front>
-	<seriesInfo name="Proceedings of the 2nd IEEE International Conference on Digital Society&#160;(ICDS)," value="Pages 171–177, ISBN&#160;978-0-7695-3087-1, DOI&#160;10.1109/ICDS.2008.12" />
-	<format type="PDF" octets="454527" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/ICDS2008-LUD.pdf" />
+	<seriesInfo name="Proceedings of the 2nd IEEE International Conference on Digital Society&#160;(ICDS)" value="Pages 171–177, ISBN&#160;978-0-7695-3087-1, DOI&#160;10.1109/ICDS.2008.12" />
+	<format type="PDF" octets="454527" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/ICDS2008-LUD.pdf" />
 </reference>
 

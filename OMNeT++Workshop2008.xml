@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="OMNeTWorkshop2008" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="OMNeTWorkshop2008" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf">
 	<front>
 		<title>A Powerful Tool-Chain for Setup, Distributed Processing, Analysis and Debugging of OMNeT++ Simulations</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
 		<date day="7" month="March" year="2008" />
 	</front>
-	<seriesInfo name="Proceedings of the 1st ACM/ICST International Workshop on OMNeT++," value="ISBN&#160;978-963-9799-20-2, DOI&#160;10.4108/ICST.SIMUTOOLS2008.2990" />
-	<format type="PDF" octets="570674" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf" />
+	<seriesInfo name="Proceedings of the 1st ACM/ICST International Workshop on OMNeT++" value="ISBN&#160;978-963-9799-20-2, DOI&#160;10.4108/ICST.SIMUTOOLS2008.2990" />
+	<format type="PDF" octets="570674" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/OMNeTWorkshop2008.pdf" />
 </reference>
 

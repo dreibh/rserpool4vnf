@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="IJIIDS2010" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJIIDS2010.pdf">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="IJIIDS2010" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJIIDS2010.pdf">
 	<front>
 		<title>On the Security of Reliable Server Pooling Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
@@ -10,7 +11,7 @@
 		<author initials="W." surname="Du" fullname="Wencai&#160;Du" />
 		<date month="December" year="2010" />
 	</front>
-	<seriesInfo name="International Journal on Intelligent Information and Database Systems&#160;(IJIIDS)," value="Volume 4, Number 6, Pages 552–578, ISSN&#160;1751-5858, DOI&#160;10.1504/IJIIDS.2010.036894" />
-	<format type="PDF" octets="552265" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJIIDS2010.pdf" />
+	<seriesInfo name="International Journal on Intelligent Information and Database Systems&#160;(IJIIDS)" value="Number 6, Volume 4, Pages 552–578, ISSN&#160;1751-5858, DOI&#160;10.1504/IJIIDS.2010.036894" />
+	<format type="PDF" octets="552265" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJIIDS2010.pdf" />
 </reference>
 

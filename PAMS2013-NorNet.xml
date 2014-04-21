@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="PAMS2013-NorNet" target="http://simula.no/publications/threfereedinproceedingsreference.2012-12-20.7643198512/simula_pdf_file">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="PAMS2013-NorNet" target="https://simula.no/publications/threfereedinproceedingsreference.2012-12-20.7643198512/simula_pdf_file">
 	<front>
 		<title>Design and Implementation of the NorNet Core Research Testbed for Multi-Homed Systems</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<author initials="E.&#160;G." surname="Gran" fullname="Ernst Gunnar&#160;Gran" />
 		<date day="27" month="March" year="2013" />
 	</front>
-	<seriesInfo name="Proceedings of the 3nd International Workshop on Protocols and Applications with Multi-Homing Support&#160;(PAMS)," value="Pages 1094–1100, ISBN&#160;978-0-7695-4952-1, DOI&#160;10.1109/WAINA.2013.71" />
-	<format type="PDF" octets="20563001" target="http://simula.no/publications/threfereedinproceedingsreference.2012-12-20.7643198512/simula_pdf_file" />
+	<seriesInfo name="Proceedings of the 3nd International Workshop on Protocols and Applications with Multi-Homing Support&#160;(PAMS)" value="Pages 1094–1100, ISBN&#160;978-0-7695-4952-1, DOI&#160;10.1109/WAINA.2013.71" />
+	<format type="PDF" octets="20563001" target="https://simula.no/publications/threfereedinproceedingsreference.2012-12-20.7643198512/simula_pdf_file" />
 </reference>
 

@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="IJAIT2009" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJAIT2009.pdf">
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="IJAIT2009" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJAIT2009.pdf">
 	<front>
 		<title>Overview and Evaluation of the Server Redundancy and Session Failover Mechanisms in the Reliable Server Pooling Framework</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<author initials="E.&#160;P." surname="Rathgeb" fullname="Erwin Paul&#160;Rathgeb" />
 		<date month="June" year="2009" />
 	</front>
-	<seriesInfo name="International Journal on Advances in Internet Technology&#160;(IJAIT)," value="Volume 2, Number 1, Pages 1–14, ISSN&#160;1942-2652" />
-	<format type="PDF" octets="1183747" target="http://www.tdr.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJAIT2009.pdf" />
+	<seriesInfo name="International Journal on Advances in Internet Technology&#160;(IJAIT)" value="Number 1, Volume 2, Pages 1–14, ISSN&#160;1942-2652" />
+	<format type="PDF" octets="1183747" target="https://www.wiwi.uni-due.de/fileadmin/fileupload/I-TDR/ReliableServer/Publications/IJAIT2009.pdf" />
 </reference>
 

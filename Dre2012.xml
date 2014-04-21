@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
 <reference anchor="Dre2012" target="http://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29737/Dre2012_final.pdf">
 	<front>
 		<title>Evaluation and Optimisation of Multi-Path Transport using the Stream Control Transmission Protocol</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<date day="13" month="March" year="2012" />
 	</front>
+	<seriesInfo name="" value="Habilitation Treatise" />
 	<format type="PDF" octets="37661345" target="http://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29737/Dre2012_final.pdf" />
 </reference>
 
