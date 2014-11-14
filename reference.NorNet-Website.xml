@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<reference anchor="NorNet-Website" target="http://www.nntb.no/">
+<reference anchor="NorNet-Website" target="https://www.nntb.no/">
  <front>
   <title>NorNet -- A Real-World, Large-Scale Multi-Homing Testbed</title>
-  <author initials="J." surname="Xiang" fullname="Jie Xiang" />
-  <date year="2013" />
+  <author initials="T." surname="Dreibholz" fullname="Thomas Dreibholz" />
+  <date year="2014" />
  </front>
- <seriesInfo name="Online:" value="http://www.nntb.no/" />
- <format type="HTML" octets="1024" target="http://www.nntb.no/" />
+ <seriesInfo name="Online:" value="https://www.nntb.no/" />
+ <format type="HTML" octets="1024" target="https://www.nntb.no/" />
 </reference>
