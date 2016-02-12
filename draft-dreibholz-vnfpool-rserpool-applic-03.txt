@@ -462,7 +462,7 @@ Internet-Draft            RSerPool for VNFPOOL             February 2016
 3.10.  Reference Implementation and Deployment
 
    RSPLIB is the Open Source reference implementation of RSerPool.  It
-   is currently -- as of October 2013 -- available for Linux, FreeBSD,
+   is currently -- as of February 2016 -- available for Linux, FreeBSD,
    MacOS and Solaris.  It is actively maintained.  Particularly, it is
    also included in Ubuntu Linux as well as in the FreeBSD ports
    collection.  RSPLIB can be downloaded from [14].  Further details on
