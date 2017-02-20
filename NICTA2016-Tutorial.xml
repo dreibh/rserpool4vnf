@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
-<reference anchor="NICTA2016-Tutorial" target="https://www.simula.no/sites/www.simula.no/files/publications/files/nicta2016-tutorial.pdf">
+<reference anchor="NICTA2016-Tutorial" target="https://www.simula.no/file/nicta2016-tutorialpdf/download">
 	<front>
 		<title>An Experiment Tutorial for the NorNet Core Testbed at NICTA</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<date day="22" month="January" year="2016" />
 	</front>
 	<seriesInfo name="" value="Tutorial at National Information Communications Technology Australia&#160;(NICTA)" />
-	<format type="PDF" octets="4238917" target="https://www.simula.no/sites/www.simula.no/files/publications/files/nicta2016-tutorial.pdf" />
+	<format type="PDF" octets="4238917" target="https://www.simula.no/file/nicta2016-tutorialpdf/download" />
 </reference>
 

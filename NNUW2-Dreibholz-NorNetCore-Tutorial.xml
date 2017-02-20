@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
-<reference anchor="NNUW2-Dreibholz-NorNetCore-Tutorial" target="https://www.simula.no/publications/Simula.simula.2938/simula_pdf_file">
+<reference anchor="NNUW2-Dreibholz-NorNetCore-Tutorial" target="https://www.simula.no/file/simulasimula2938pdf/download">
 	<front>
 		<title>An Experiment Tutorial for the NorNet Core Testbed</title>
 		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
 		<date day="29" month="August" year="2014" />
 	</front>
 	<seriesInfo name="" value="Proceedings of the 2nd International NorNet Users Workshop&#160;(NNUW-2)" />
-	<format type="PDF" octets="6177702" target="https://www.simula.no/publications/Simula.simula.2938/simula_pdf_file" />
+	<format type="PDF" octets="6177702" target="https://www.simula.no/file/simulasimula2938pdf/download" />
 </reference>
 
