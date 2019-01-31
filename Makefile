@@ -7,7 +7,7 @@ all:   $(txtfiles) $(htmlfiles)
 
 $(txtfiles):	%.txt: %.xml
 	xml2rfc $< $@ --text
-	./idnits $@
+	~/.local/bin/idnits $@
 
 $(htmlfiles):	%.html: %.xml
 	xml2rfc $< $@ --html
