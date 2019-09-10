@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rfc PUBLIC '-//IETF//DTD RFC 2629//EN' 'http://xml.resource.org/authoring/rfc2629.dtd'>
+<reference anchor="Haikou2019-NorNet-Tutorial" target="https://www.simula.no/file/china2019-nornet-tutorialpdf/download">
+	<front>
+		<title>NorNet at Hainan University: Getting Started with NorNet Core</title>
+		<author initials="T." surname="Dreibholz" fullname="Thomas&#160;Dreibholz" />
+		<date day="16" month="April" year="2019" />
+	</front>
+	<seriesInfo name="" value="Tutorial at Hainan University, College of Information Science and Technology&#160;(CIST)" />
+	<format type="PDF" octets="7460860" target="https://www.simula.no/file/china2019-nornet-tutorialpdf/download" />
+</reference>
+
